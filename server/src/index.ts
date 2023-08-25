@@ -11,12 +11,12 @@ import managementRoutes from './routes/management';
 import salesRoutes from './routes/sales';
 
 // data imports
-import User from './models/User'; 
+import User from './models/User';
 import Product from './models/Product';
-import ProductStat from './models/ProductStat'; 
-import Transaction from './models/Transaction'; 
-import OverallStat from './models/OverallStat'; 
-import AffiliateStat from './models/AffilliateStat'; 
+import ProductStat from './models/ProductStat';
+import Transaction from './models/Transaction';
+import OverallStat from './models/OverallStat';
+import AffiliateStat from './models/AffilliateStat';
 import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat, dataAffiliateStat } from './data/index';
 
 /* CONFIGURATION */
@@ -36,7 +36,7 @@ app.use('/management', managementRoutes);
 app.use('/sales', salesRoutes);
 
 /*MONGOOSE SETUP */
-const PORT: string | number  = process.env.PORT || 9000;
+const PORT: string | number  = process.env.PORT || 5001;
 
 mongoose
     .connect(process.env.MONGO_URL as string, {
